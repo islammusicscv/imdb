@@ -1,8 +1,6 @@
-<html>
-    <head>
-    </head>
-
-<body>
+<?php
+    include_once "header.php";
+?>
     <h1>Dobrodošli na strani MOVIES</h1>
     <?php
         $b = 110;
@@ -20,8 +18,6 @@
 
         echo '<a href="index.php?id='.$a.'">INDEX</a>';
     ?>
-
-
-</body>
-
-</html>
+<?php
+    include_once "footer.php";
+?>

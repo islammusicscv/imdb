@@ -24,6 +24,7 @@
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-4 pt-1">
             <!--<a class="text-muted" href="#">Subscribe</a>-->
+            <img src="./assets/img/logo.png" alt="logo" width="80px" />
           </div>
           <div class="col-4 text-center">
             <a class="blog-header-logo text-dark" href="#">Large</a>

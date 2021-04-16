@@ -1,11 +1,12 @@
 <?php
 
-
+//podatki za strežnik
 $host = '127.0.0.1'; //localhost
 $db   = 'imdb';
 $user = 'imdb';
 $pass = 'Velenje3320';
 $charset = 'utf8mb4';
+
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [

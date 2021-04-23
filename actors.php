@@ -13,7 +13,9 @@ $stmt->execute();
 //izpis vseh igralcev
 while ($row = $stmt->fetch()) {
     echo '<div class="actor">';
-    echo $row['first_name'].' '.$row['last_name'];
+    echo '<a href="actor.php?id='.$row['id'].'">';
+        echo $row['first_name'].' '.$row['last_name'];
+    echo '</a>';
     echo '<br />';
     echo '<span>'.$row['nick'].'</span>';
     echo '<br />';

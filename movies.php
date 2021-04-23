@@ -1,23 +1,31 @@
-<?php
-    include_once "header.php";
+<?php 
+include_once "header.php";
+include_once "db.php";
 ?>
-    <h1>Dobrodošli na strani MOVIES</h1>
-    <?php
-        $b = 110;
 
-        if (isset($_GET['vrednost'])) {
-            $a = $_GET['vrednost'];
-        }
-        else {
-            $a=0;
-        }
-
-        echo $a;
-
-        $a++; // $a = $a+1;
-
-        echo '<a href="index.php?id='.$a.'">INDEX</a>';
-    ?>
+<a href="movie_add.php" class="btn btn-primary">Dodaj film</a> 
+<br />
+<div class="movies">
 <?php
-    include_once "footer.php";
+$query = "SELECT * FROM movies";
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+//izpis vseh filmov
+while ($row = $stmt->fetch()) {
+    echo '<div class="movie">';
+    echo '<a href="movie.php?id='.$row['id'].'">';
+        echo $row['title'];
+    echo '</a>';
+    echo '<br />';
+    echo '<span>'.$row['year_release'].'</span>';
+    echo '<br />';
+    echo '<a href="movie_edit.php?id='.$row['id'].'">Uredi</a> ';
+    echo '<a href="movie_delete.php?id='.$row['id'].'" onclick="return confirm(\'Prepričani?\')">Izbriši</a> ';
+    echo '</div>';
+}
+?>
+</div>
+
+<?php 
+include_once "footer.php";
 ?>

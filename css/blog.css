@@ -134,9 +134,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /**** moja koda ****/
 .igralci, .film, .komentarji {
-  border-color: black;
+  /*border-color: black;
   border-width: 2px;
-  border-style: solid;
+  border-style: solid;*/
   margin-bottom: 20px;
 }
 

@@ -4,6 +4,10 @@ include_once 'db.php';
 
 $id = (int) $_GET['id'];
 
+$query = "SELECT * FROM movies WHERE id=?";
+$stmt = $pdo->prepare($query);
+$stmt->execute([$id]);
+$movie = $stmt->fetch();
 
 
 ?>
@@ -13,14 +17,12 @@ $id = (int) $_GET['id'];
         <img src="https://images-na.ssl-images-amazon.com/images/I/7124A8OOL6L._AC_SL1001_.jpg" alt="slika" />
     </div>
     <div class="film-podatki">
-        <div class="naslov">Terminator</div>
-        <div class="zanri">Akcija | Triler</div>
-        <div class="leto">1984</div>
-        <div class="dolzina">1 h 47 min</div>
+        <div class="naslov"><?php echo $movie['title'];?></div>
+        <div class="zanri"><?php echo getGenres($movie['id']);?></div>
+        <div class="leto"><?php echo $movie['year_release'];?></div>
+        <div class="dolzina"><?php echo fromMinToString($movie['duration']);?></div>
         <div class="ocena"> * * * * *</div>
-        <div class="opis">Schwarzenegger v filmu igra Terminatorja, morilskega kiborga, ki je poslan nazaj v času iz leta 2029 da bi ubil Sarah Connor (Hamilton). Njen še nerojeni sin John Connor naj bi po katastrofalni jedrski vojni v prihodnosti vodil upore proti inteligentnim strojem. Za Terminatorjem pa v preteklost pride tudi Kyle Reese (Biehn), ki mora zaščititi Sarah Connor, da bo lahko nekoč rodila sina.
-
-Nepričakovani komercialni uspeh filma je bil odskočna deska za režisersko kariero takrat še neuveljavljenega Camerona, hkrati pa je utrdil Schwarzeneggerjev sloves zvezde akcijskih filmov.</div>
+        <div class="opis"><?php echo $movie['description'];?></div>
     </div>
 </div>
 <div class="igralci">

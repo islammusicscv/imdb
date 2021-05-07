@@ -130,3 +130,71 @@ h1, h2, h3, h4, h5, h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+
+/**** moja koda ****/
+.igralci, .film, .komentarji {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  margin-bottom: 20px;
+}
+
+.film {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.film-slike img {
+  width: 100%;
+}
+
+.film-podatki {
+  font-size: 1.5em;
+}
+
+.film-podatki .naslov {
+  font-weight: bold;
+  font-size: 2em;
+  color:blueviolet;
+}
+
+.film-podatki .zanri {
+  font-style: italic;
+}
+
+
+.film-podatki .opis {
+  font-size: 0.6em;
+  font-style: italic;
+}
+
+.igralci {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.igralec img {
+  width: 60%;
+}
+
+.igralec .igralec-podatki {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.komentarji-prikaz {
+  margin-top: 50px;
+}
+
+.komentar-podatki {
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 0.6em;
+  font-weight: bold;
+} 
+
+.komentar div {
+  font-size: 0.8em;
+}

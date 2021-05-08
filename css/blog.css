@@ -170,17 +170,30 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
 }
 
-.igralci {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.igralec {
+  margin: 8px 8px 8px 0;
 }
 
-.igralec img {
-  width: 60%;
+.igralci {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.igralec-slika {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.igralec-slika img {
+  width: 100%;
+  height: auto;
 }
 
 .igralec .igralec-podatki {
-  font-size: 1.2em;
+  font-size: 0.9em;
   font-weight: bold;
 }
 

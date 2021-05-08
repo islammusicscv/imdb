@@ -27,13 +27,33 @@ $movie = $stmt->fetch();
 </div>
 <div class="igralci">
     <div class="igralec">
-        <img src="https://res.cloudinary.com/du1efakdk/image/upload/c_fill,f_auto,h_414,q_auto,w_280/v1617012871/kftv/nig1dtun8ug4gsx1td4n.jpg" alt="igralec" />
+        <div class="igralec-slika">
+            <img src="https://res.cloudinary.com/du1efakdk/image/upload/c_fill,f_auto,h_414,q_auto,w_280/v1617012871/kftv/nig1dtun8ug4gsx1td4n.jpg" alt="igralec" />
+        </div>
         <div class="igralec-podatki">
             <div>Van Diesel (Jože Novak)</div>            
         </div>
     </div>
     <div class="igralec">
-        <img src="https://res.cloudinary.com/du1efakdk/image/upload/c_fill,f_auto,h_414,q_auto,w_280/v1617012871/kftv/nig1dtun8ug4gsx1td4n.jpg" alt="igralec" />
+        <div class="igralec-slika">
+            <img src="https://res.cloudinary.com/du1efakdk/image/upload/c_fill,f_auto,h_414,q_auto,w_280/v1617012871/kftv/nig1dtun8ug4gsx1td4n.jpg" alt="igralec" />
+        </div>
+        <div class="igralec-podatki">
+            <div>Van Diesel (Jože Novak)</div>            
+        </div>
+    </div>
+    <div class="igralec">
+        <div class="igralec-slika">
+            <img src="https://res.cloudinary.com/du1efakdk/image/upload/c_fill,f_auto,h_414,q_auto,w_280/v1617012871/kftv/nig1dtun8ug4gsx1td4n.jpg" alt="igralec" />
+        </div>
+        <div class="igralec-podatki">
+            <div>Van Diesel (Jože Novak)</div>            
+        </div>
+    </div>
+    <div class="igralec">
+        <div class="igralec-slika">
+            <img src="https://res.cloudinary.com/du1efakdk/image/upload/c_fill,f_auto,h_414,q_auto,w_280/v1617012871/kftv/nig1dtun8ug4gsx1td4n.jpg" alt="igralec" />
+        </div>
         <div class="igralec-podatki">
             <div>Van Diesel (Jože Novak)</div>            
         </div>

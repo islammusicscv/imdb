@@ -38,6 +38,7 @@
 </div><br />
 <hr /><br />
 <h2>Igralska zasedba</h2></br>
+<a href="movie_actors.php?id=<?php echo $id;?>" class="btn btn-primary">Igralci v tem filmu</a>
 <div class="igralci">
     <div class="igralec">
         <table>
@@ -52,40 +53,6 @@
                         <div>Jože Novak</div>
                 </td>
             </tr>
-
-            <tr>
-                <td><img src="https://res.cloudinary.com/du1efakdk/image/upload/c_fill,f_auto,h_414,q_auto,w_280/v1617012871/kftv/nig1dtun8ug4gsx1td4n.jpg"
-                        alt="igralec" /></td>
-                <td>
-                    <div class="igralec-podatki">Wan Diesel</div>
-                </td>
-                <td>
-                    <div class="igralec-film-podatki">Jože Novak</div>
-                </td>
-            </tr>
-
-            <tr>
-                <td><img src="https://res.cloudinary.com/du1efakdk/image/upload/c_fill,f_auto,h_414,q_auto,w_280/v1617012871/kftv/nig1dtun8ug4gsx1td4n.jpg"
-                        alt="igralec" /></td>
-                <td>
-                    <div class="igralec-podatki">Wan Diesel</div>
-                </td>
-                <td>
-                    <div class="igralec-film-podatki">Jože Novak</div>
-                </td>
-            </tr>
-
-            <tr>
-                <td><img src="https://res.cloudinary.com/du1efakdk/image/upload/c_fill,f_auto,h_414,q_auto,w_280/v1617012871/kftv/nig1dtun8ug4gsx1td4n.jpg"
-                        alt="igralec" /></td>
-                <td>
-                    <div class="igralec-podatki">Wan Diesel</div>
-                </td>
-                <td>
-                    <div class="igralec-film-podatki">Jože Novak</div>
-                </td>
-            </tr>
-
             <tr>
                 <br />
                 <td><a href="#">Prikaži vse igralce</a></td>

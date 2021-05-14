@@ -42,5 +42,16 @@ Funkcija nam vrača timestamp v obliki SLO: dd. mm. yyyy @ hh:mm
 function getSloDateTime($timpestamp) {
     return date('j. n. Y @ G:i', strtotime($timpestamp));
 }
+/**
+Funkcija nam vrne podatke o filmu glede na id
+*/
+function getMovieData($id) {
+    require "db.php";
+    $query = "SELECT * FROM movies WHERE id=?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$id]);
+ 
+    return $stmt->fetch();
+}
 
 ?>

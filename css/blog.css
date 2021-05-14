@@ -132,82 +132,94 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/**** moja koda ****/
-.igralci, .film, .komentarji {
+/**** lastni css ****/
+.igralci, .film, .komentarji{
   /*border-color: black;
   border-width: 2px;
   border-style: solid;*/
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.film {
+.film{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
 }
 
-.film-slike img {
+.film img{
   width: 100%;
 }
 
-.film-podatki {
+.film-podatki{
   font-size: 1.5em;
 }
 
-.film-podatki .naslov {
+.film-podatki .naslov{
   font-weight: bold;
   font-size: 2em;
   color:blueviolet;
 }
 
-.film-podatki .zanri {
+.film-podatki .zanri{
   font-style: italic;
 }
 
-
-.film-podatki .opis {
+.film-podatki .opis{
   font-size: 0.6em;
   font-style: italic;
 }
 
-.igralec {
-  margin: 8px 8px 8px 0;
-}
-
-.igralci {
+/*.igralci{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}*/
+
+.igralec img{
+  width: 30%;
 }
 
-.igralec-slika {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
+.igralec .igralec-podatki{
+  
+  font-size: 1em;
+  font-weight: bold;
 }
 
-.igralec-slika img {
+
+.komentarji-prikaz{
+  margin-top:50px;
+}
+
+.komentar-podatki{
+  font-style:italic;
+  font-weight: bold;
+}
+
+.komentar div{
+  margin-top:5px;
+  font-size: 0.8em;
+}
+
+.post .post-heading {
+  height: 95px;
+  padding: 20px 15px;
+}
+
+.post .post-heading .avatar {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: 15px;
+}
+
+.post .post-image .image {
   width: 100%;
   height: auto;
 }
 
-.igralec .igralec-podatki {
-  font-size: 0.9em;
-  font-weight: bold;
+.post .post-description {
+  padding: 15px;
 }
 
-.komentarji-prikaz {
-  margin-top: 50px;
-}
-
-.komentar-podatki {
-  margin-top: 5px;
-  font-style: italic;
-  font-size: 0.6em;
-  font-weight: bold;
-} 
-
-.komentar div {
-  font-size: 0.8em;
+.card{
+  margin-bottom:20px;
 }

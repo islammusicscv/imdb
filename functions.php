@@ -54,4 +54,23 @@ function getMovieData($id) {
     return $stmt->fetch();
 }
 
+/**
+Funkcija vrne avatar igralca
+ */
+ function getActorAvatar($id) {
+    require "db.php";
+    $query = "SELECT * FROM actors_images WHERE actor_id=? ORDER BY date_add ASC LIMIT 1";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$id]);
+
+    $result = $stmt->fetch();
+    //če igralec nima slike, vrne povezavo do "prazne" slike
+    if (!empty($result['url'])) {
+        return $result['url'];
+    } 
+    else {
+        return './assets/img/no-avatar.jpg';
+    }
+ }
+
 ?>

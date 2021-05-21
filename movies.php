@@ -2,8 +2,11 @@
 include_once "header.php";
 include_once "db.php";
 ?>
-
-<a href="movie_add.php" class="btn btn-primary">Dodaj film</a> 
+<?php
+    if (isAdmin()) {
+        echo '<a href="movie_add.php" class="btn btn-primary">Dodaj film</a>';
+    }
+?>
 <br />
 <div class="movies">
 <?php
@@ -19,8 +22,10 @@ while ($row = $stmt->fetch()) {
     echo '<br />';
     echo '<span>'.$row['year_release'].'</span>';
     echo '<br />';
-    echo '<a href="movie_edit.php?id='.$row['id'].'">Uredi</a> ';
-    echo '<a href="movie_delete.php?id='.$row['id'].'" onclick="return confirm(\'Prepričani?\')">Izbriši</a> ';
+    if (isAdmin()){
+        echo '<a href="movie_edit.php?id='.$row['id'].'">Uredi</a> ';
+        echo '<a href="movie_delete.php?id='.$row['id'].'" onclick="return confirm(\'Prepričani?\')">Izbriši</a> ';
+    } 
     echo '</div>';
 }
 ?>

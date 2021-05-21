@@ -15,7 +15,9 @@
 <div class="film">
     <div class="film-slike">
         <img src="https://images-na.ssl-images-amazon.com/images/I/7124A8OOL6L._AC_SL1001_.jpg" alt="slika" />
-
+        <?php 
+        if (isAdmin()) {
+        ?>
         <form action="movie_image_upload.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $movie['id'];?>" />
             <input type="text" name="title" placeholder="Vnesi naslov slike" class="form-control" /><br />
@@ -26,6 +28,9 @@
             <input type="file" placeholder="Naloži sliko filma" class="form-control" name="file" /> <br />
             <input type="submit" value="Naloži" />
         </form>
+        <?php
+        }
+        ?>
     </div>
     <div class="film-podatki">
         <div class="naslov"><?php echo $movie['title'];?></div>
@@ -38,7 +43,11 @@
 </div><br />
 <hr /><br />
 <h2>Igralska zasedba</h2></br>
-<a href="movie_actors.php?id=<?php echo $id;?>" class="btn btn-primary">Igralci v tem filmu</a>
+<?php 
+    if (isAdmin()) {
+        echo '<a href="movie_actors.php?id='.$id.'" class="btn btn-primary">Igralci v tem filmu</a>';
+    }
+?>
 <div class="igralci">
     <div class="igralec">
         <table>

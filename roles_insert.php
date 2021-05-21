@@ -1,5 +1,8 @@
 <?php
     include_once "session.php"; 
+
+    adminOnly();
+
     include_once "db.php";
 
     $movie_id = (int) $_POST['movie_id'];

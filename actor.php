@@ -26,6 +26,9 @@ $actor = $stmt->fetch();
 ?>
 
 </div>
+<?php
+if (isAdmin()){
+?>
 <hr />
 <form action="actor_image_upload.php" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?php echo $actor['id'];?>" />
@@ -33,7 +36,9 @@ $actor = $stmt->fetch();
     <input type="file" name="file" class="form-control" /> <br />
     <input type="submit" name="submit" value="Naloži" class="btn btn-primary" />
 </form>
-
+<?php
+}
+?>
 
 <?php 
 include_once "footer.php";

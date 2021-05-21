@@ -2,8 +2,11 @@
 include_once "header.php";
 include_once "db.php";
 ?>
-
-<a href="actor_add.php" class="btn btn-primary">Dodaj igralca</a> 
+<?php
+    if (isAdmin()) {
+        echo '<a href="actor_add.php" class="btn btn-primary">Dodaj igralca</a>';
+    }
+?>
 <br />
 <div class="actors">
 <?php
@@ -19,8 +22,10 @@ while ($row = $stmt->fetch()) {
     echo '<br />';
     echo '<span>'.$row['nick'].'</span>';
     echo '<br />';
-    echo '<a href="actor_edit.php?id='.$row['id'].'">Uredi</a> ';
-    echo '<a href="actor_delete.php?id='.$row['id'].'" onclick="return confirm(\'Prepričani?\')">Izbriši</a> ';
+    if (isAdmin()) {
+        echo '<a href="actor_edit.php?id='.$row['id'].'">Uredi</a> ';
+        echo '<a href="actor_delete.php?id='.$row['id'].'" onclick="return confirm(\'Prepričani?\')">Izbriši</a> ';
+    }
     echo '</div>';
 }
 ?>

@@ -275,3 +275,24 @@ label.star:before {
 .card:hover .brisanje {
   visibility: visible;
 }
+
+/*spročilni sistem*/
+.sporocila {
+  width: 30%;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.sporocila .napaka {
+  background-color: crimson;
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.sporocila .uspeh {
+  background-color:seagreen;
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+}

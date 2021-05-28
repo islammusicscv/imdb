@@ -70,5 +70,9 @@
     </div>
 
     <main role="main" class="container">
+      <div class="sporocila">
+        <span class="uspeh">Uspešno glasovanje.</span>
+      </div>
       <div class="row">
         <div class="col-md-8 blog-main">
+          

@@ -17,7 +17,12 @@ if (canCurrentUserDeleteComent($id)) {
     $query = "DELETE FROM comments WHERE id=?";
     $stmt = $pdo->prepare($query);
     $stmt->execute([$id]);
+
+    msg('Komentar izbrisan!');
 } 
+else {
+    msg('Nimate pravic!','napaka');
+}
 
 header("Location: movie.php?id=$movie_id#komentar-sidro"); die();
 

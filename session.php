@@ -37,5 +37,15 @@ function adminOnly() {
     }
 }
 
+/**
+funkcija nam dodaj sporočilo v sistem
+$content: besedilo
+$type: napaka, uspeh
+*/
+function msg($content,$type='uspeh') {
+    $_SESSION['msg'] = $content;
+    $_SESSION['msg_type'] = $type;
+}
+
 
 ?>

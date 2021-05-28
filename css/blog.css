@@ -277,20 +277,23 @@ label.star:before {
 }
 
 /*spročilni sistem*/
-.sporocila {
+#sporocila {
   width: 30%;
   margin: 10px auto;
   justify-content: center;
+  top: 40px;
+  z-index:100;
+  position: sticky; 
 }
 
-.sporocila .napaka {
+#sporocila .napaka {
   background-color: crimson;
   color: white;
   padding: 10px;
   border-radius: 100px;
 }
 
-.sporocila .uspeh {
+#sporocila .uspeh {
   background-color:seagreen;
   color: white;
   padding: 10px;

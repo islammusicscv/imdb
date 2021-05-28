@@ -70,8 +70,15 @@
     </div>
 
     <main role="main" class="container">
-      <div class="sporocila">
-        <span class="uspeh">Uspešno glasovanje.</span>
+      <div id="sporocila">
+        <?php
+        //preveri, če obstaja sporočilo in ga izpiše
+          if (isset($_SESSION['msg'])) {
+            echo '<span class="'.$_SESSION['msg_type'].'">'.$_SESSION['msg'].'</span>';
+            //brisanje sporočila
+            unset($_SESSION['msg']);
+          }
+        ?>
       </div>
       <div class="row">
         <div class="col-md-8 blog-main">

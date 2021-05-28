@@ -50,5 +50,11 @@
         text: 'Thumbnail'
       });
     </script>
+    <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
+    <script type="text/javascript">
+      setTimeout(function() {
+        $('#sporocila').fadeOut();
+      }, 5000);
+    </script>
   </body>
 </html>

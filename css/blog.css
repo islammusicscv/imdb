@@ -265,3 +265,13 @@ label.star:before {
   content: '\f006';
   font-family: FontAwesome
 }
+
+
+/**prikaz gumba x za brisanje komentarjev**/
+.brisanje {
+  visibility: hidden;
+}
+
+.card:hover .brisanje {
+  visibility: visible;
+}

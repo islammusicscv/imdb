@@ -151,4 +151,30 @@ function canUserRateMovie($user_id,$movie_id) {
 
 }
 
+/**
+Ali lahko trenutno prijavljeni uporabnik briše komentar. Vrača 0 ali 1.
+$comment_id: id komentarja, ki ga preverjamo
+*/
+function canCurrentUserDeleteComent($comment_id) {
+    require 'db.php';
+
+    $user_id = $_SESSION['user_id'];
+    //preveri, če je admin
+    if (isset($_SESSION['admin']) && ($_SESSION['admin'] == 1)) {
+        return 1;
+    }
+    else {
+        $query = "SELECT * FROM comments WHERE id=? AND user_id=?";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute([$comment_id,$user_id]);
+        //uporabnik ni lastnik komentarja
+        if ($stmt->rowCount() == 0) {
+            return 0;
+        }
+        else {
+            return 1;
+        }
+    }    
+}
+
 ?>

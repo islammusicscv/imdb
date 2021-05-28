@@ -184,6 +184,13 @@
             <div class="row">
                 <div class="col-8">
                     <div class="card post">
+                        <?php
+                            if (canCurrentUserDeleteComent($row['id'])) {
+                                echo '<div class="brisanje">';
+                                echo '<a href="comment_delete.php?id='.$row['id'].'" class="btn btn-warning" onclick="return confirm(\'Prepričani?\')">Briši</a>';
+                                echo '</div>';
+                            }
+                        ?>
                         <div class="post-heading">
                             <div class="float-left image"><img
                                     src="<?php echo getUserAvatar($row['user_id']);?>"

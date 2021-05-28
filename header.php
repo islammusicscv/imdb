@@ -16,6 +16,8 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <link href="./css/blog.css" rel="stylesheet">
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel="stylesheet">
   </head>
 
   <body>
@@ -55,9 +57,12 @@
           if (isAdmin()) {
             echo '<a class="p-2 text-muted" href="genres.php">Žanri</a>';
           }
-        ?>          
-          <a class="p-2 text-muted" href="actors.php">Igralci</a>
-          <a class="p-2 text-muted" href="movies.php">Filmi</a>
+          //je prijavljen?
+          if (isset($_SESSION['user_id'])) {
+            echo '<a class="p-2 text-muted" href="actors.php">Igralci</a>';
+            echo '<a class="p-2 text-muted" href="movies.php">Filmi</a>';
+          }
+        ?>    
         </nav>
       </div>
 

@@ -111,4 +111,44 @@ function getGenres($movie_id) {
     return $return;
 }
 
+/**
+Vrača vrednost ocene filma. Če ocene še ni - vrne N/A
+$id: id filma
+*/
+function movieRate($id) {
+    require 'db.php';
+
+    $query = "SELECT * FROM movies WHERE id=?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$id]);
+    $movie = $stmt->fetch();
+
+    $result = 'N/A';
+
+    if (!empty($movie['rate'])) {
+        $result = $movie['rate'];
+    }
+
+    return $result;
+}
+
+/**
+Funkcija vrača ali uporabnik lahko glasuje za določen film.
+*/
+function canUserRateMovie($user_id,$movie_id) {
+    require 'db.php';
+
+    $query = "SELECT * FROM rates WHERE user_id=? AND movie_id=?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$user_id,$movie_id]);
+    
+    if ($stmt->rowCount() == 0) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+
+}
+
 ?>
